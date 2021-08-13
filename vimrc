@@ -5,6 +5,7 @@ Plug 'kien/ctrlp.vim'
 Plug 'vim-scripts/mru.vim'
 Plug 'vim-scripts/netrw.vim'
 Plug 'airblade/vim-gitgutter'
+Plug 'easymotion/vim-easymotion'
 call plug#end()
 
 set shell=/bin/sh
@@ -242,6 +243,14 @@ map <c-b> :CtrlPBuffer<cr>
 let g:ctrlp_max_height = 20
 let g:ctrlp_custom_ignore = 'node_modules\|^\.DS_Store\|^\.git\|^\.coffee'
 
+" easymotion
+let g:EasyMotion_smartcase = 1
+map <Leader><Leader>j <Plug>(easymotion-j)
+map <Leader><Leader>k <Plug>(easymotion-k)
+map <Leader><leader>h <Plug>(easymotion-linebackward)
+map <Leader><leader>l <Plug>(easymotion-lineforward)
+map <Leader><leader>. <Plug>(easymotion-repeat)
+
 " golint
 " set rtp+=/path/to/your/golint
 " autocmd BufWritePost,FileWritePost *.go execute 'Lint' | cwindow
@@ -249,3 +258,5 @@ let g:ctrlp_custom_ignore = 'node_modules\|^\.DS_Store\|^\.git\|^\.coffee'
 " pretty tag
 " set rtp+=/path/to/your/formattag
 " autocmd BufWritePost,FileWritePost *.go execute 'PrettyTag' | checktime
+
+
