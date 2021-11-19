@@ -8,6 +8,10 @@ Plug 'airblade/vim-gitgutter'
 Plug 'easymotion/vim-easymotion'
 call plug#end()
 
+let g:go_fmt_command = "gofmt"
+" disable autoimport
+let g:go_imports_autosave = 0
+
 set shell=/bin/sh
 set autoread
 " Personal setting
